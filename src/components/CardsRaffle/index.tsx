@@ -6,12 +6,6 @@ import styles from './styles.module.scss';
 
 export function CardsRaffle() {
 
-    useEffect(() => {
-        fetch('http://localhost:3000/api/cards')
-        .then(response => response.json())
-        .then(data => console.log(data))
-      }, [])
-
     return (
         <div className={styles.headerContainer}>
             <section>

@@ -1,0 +1,26 @@
+import styles from './styles.module.scss';
+import { signIn, signOut, useSession } from 'next-auth/react'
+
+export function Header() {
+    return session ? (
+        <button
+          className={styles.button}
+          type="button"
+        >
+          Vinicius Ferreira
+        </button>
+      ) : (
+        <button
+          className={styles.button}
+          type="button"
+          onClick={() => signIn('github')}
+        >
+          <FaGithub color="#eba417"/>
+          Sign In with Google
+        </button>
+      )
+    } 
+<button type="button" onClick={() => signIn('google')}>
+Sing in with Google
+</button>
+
